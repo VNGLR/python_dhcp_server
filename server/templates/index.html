@@ -17,6 +17,23 @@
         <!-- Rows will be added by JavaScript -->
     </tbody>
 </table>
+<form action="/update-config" method="post">
+    <label for="dhcp_offer_after_seconds">DHCP Offer After Seconds:</label>
+    <input type="text" id="dhcp_offer_after_seconds" name="dhcp_offer_after_seconds"><br><br>
+
+    <label for="dhcp_acknowledge_after_seconds">DHCP Acknowledge After Seconds:</label>
+    <input type="text" id="dhcp_acknowledge_after_seconds" name="dhcp_acknowledge_after_seconds"><br><br>
+
+    <label for="network">Network Address:</label>
+    <input type="text" id="network" name="network"><br><br>
+    <label for="subnet_mask">Subnet Mask:</label>
+<input type="text" id="subnet_mask" name="subnet_mask"><br><br>
+
+    <!-- Add other fields as necessary -->
+
+    <input type="submit" value="Update Configurations">
+</form>
+
 </body>
 </html>
 <script>
