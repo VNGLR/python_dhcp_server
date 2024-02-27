@@ -99,4 +99,4 @@ The web GUI also allowed users to alter the configuration file from the browser,
 
 https://github.com/VNGLR/python_dhcp_server/tree/webgui
 
-[images/dhcpwebgui.png](images/dhcpwebgui.png)  
+![images/dhcpwebgui.png](images/dhcpwebgui.png)  
