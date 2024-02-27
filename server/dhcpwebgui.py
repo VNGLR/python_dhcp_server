@@ -54,6 +54,8 @@ def update_config():
     dhcp_acknowledge_after_seconds = request.form.get('dhcp_acknowledge_after_seconds')
     network = request.form.get('network')
     subnet_mask = request.form.get('subnet_mask')
+    router = request.form.get('router')
+    domain_name_server =request.form.get('domain_name_server')
 
     if dhcp_offer_after_seconds == '':
         dhcp_offer_after_seconds = 10
@@ -63,6 +65,10 @@ def update_config():
         network = '192.168.137.0'
     if subnet_mask == '':
         subnet_mask = '255.255.255.0'
+    if router =='':
+        router='192.168.137.1'
+    if domain_name_server == '':
+        domain_name_server='8.8.8.8'
 
     
     # Construct the new configuration string
@@ -87,13 +93,13 @@ subnet_mask = '{subnet_mask}'
 # router = None # Do not tell clients about routers.
 # router = []   # Tell clients there is no router.
 # router = ['192.168.137.1'] # 192.168.137.1 is a router.
-router = None
+router = '{router}'
 
 # This are the addresses of the DNS-server.
 # domain_name_server = None # Do not tell clients about DNS-Servers.
 # domain_name_server = []   # Tell clients there is no DNS-server.
 # domain_name_server = ['192.168.137.1'] # 192.168.137.1 is a DNS-Server.
-domain_name_server = None # list of ips
+domain_name_server = '{domain_name_server}'
 
 # This is the time in seconds after which the client
 #   should have asked for a new IP address.
