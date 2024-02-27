@@ -1,4 +1,4 @@
-from flask import Flask, render_template,jsonify,request,redirect
+from flask import Flask, render_template,jsonify,request,redirect, url_for
 from dhcp import *
 import os
 import sys
@@ -46,11 +46,24 @@ def update():
 
 @app.route('/update-config', methods=['POST'])
 def update_config():
+
+
+
     # Extracting form data
     dhcp_offer_after_seconds = request.form.get('dhcp_offer_after_seconds')
     dhcp_acknowledge_after_seconds = request.form.get('dhcp_acknowledge_after_seconds')
     network = request.form.get('network')
     subnet_mask = request.form.get('subnet_mask')
+
+    if dhcp_offer_after_seconds == '':
+        dhcp_offer_after_seconds = 10
+    if dhcp_acknowledge_after_seconds == '':
+        dhcp_acknowledge_after_seconds = 10
+    if network == '':
+        network = '192.168.137.0'
+    if subnet_mask == '':
+        subnet_mask = '255.255.255.0'
+
     
     # Construct the new configuration string
     new_config = f"""
