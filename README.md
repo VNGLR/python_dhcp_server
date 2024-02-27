@@ -98,3 +98,5 @@ Web GUI Enhancement: In addition to its core DHCP functionalities, this Python D
 The web GUI also allowed users to alter the configuration file from the browser, however this feature is still under development. At the current time it can alter the DHCP offer and Acknowledge  timers, subnet, subnet mask, default gateway, and DNS server
 
 https://github.com/VNGLR/python_dhcp_server/tree/webgui
+
+[images/dhcpwebgui.png](images/dhcpwebgui.png)  
