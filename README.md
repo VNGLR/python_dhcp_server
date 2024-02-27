@@ -89,3 +89,12 @@ When the source code is changed, create a new release.
 [releases]: https://github.com/niccokunzmann/python_dhcp_server/releases
 [zip]: https://github.com/niccokunzmann/python_dhcp_server/archive/refs/heads/master.zip
 [issues]: https://github.com/niccokunzmann/python_dhcp_server/issues
+
+
+WebGUI Fork:
+
+Web GUI Enhancement: In addition to its core DHCP functionalities, this Python DHCP Server features an integrated Web GUI, providing a more intuitive and user-friendly interface for monitoring and managing network clients. Accessible directly through your web browser, the GUI displays real-time information about connected clients, including their MAC addresses, IP addresses, and host names. It simplifies server management tasks, such as tracking newly connected devices and reviewing client details, making it an invaluable tool for network administrators and users who prefer graphical interfaces over traditional command-line operations.
+
+The web GUI also allowed users to alter the configuration file from the browser, however this feature is still under development. At the current time it can alter the DHCP offer and Acknowledge  timers, subnet, subnet mask, default gateway, and DNS server
+
+https://github.com/VNGLR/python_dhcp_server/tree/webgui
